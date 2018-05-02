@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
-import { Button } from 'antd';
-import logo from './logo.svg';
-import Style from './App.less';
-class App extends Component {
-  componentWillMount () {
-    Style.use()
-  }
-  render() {
-    return (
-      <div className="App">
-        <Button type='danger'>开始</Button>
-      </div>
-    );
-  }
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom'
 
-  componentWillUnmount () {
-    Style.unuse()
-  }
-}
+import ROUTES from './routes'
 
-export default App;
+
+const MyRoute = () => (
+  <Router>
+    <div>
+      {ROUTES.map(route => {
+          return <Route exact={true} key={route.path} path={route.path} component={route.page}></Route>
+        })}
+    </div>
+  </Router>
+)
+
+export default MyRoute

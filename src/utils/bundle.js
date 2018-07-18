@@ -34,6 +34,6 @@ export default class Bundle extends Component {
   render() {
       let Component = this.state.component
       let {props} = this.props
-      return Component ? <Component {...props}></Component> : null;
+      return (Component) ? <Component {...props}></Component> : null;
   }
 }

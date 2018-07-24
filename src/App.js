@@ -5,8 +5,8 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom'
-
 import ROUTES from './routes'
+
 
 class AuthRoute extends  Component {
   render () {

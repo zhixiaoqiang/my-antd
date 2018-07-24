@@ -1,0 +1,1 @@
+const Sequelize = require('sequelize'); // 持续连接数据库

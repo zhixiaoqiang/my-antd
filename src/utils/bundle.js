@@ -1,6 +1,6 @@
 // 代码拆分
 import React, { Component } from 'react'
-
+import {setTitle} from 'utils'
 export default class Bundle extends Component {
   constructor(props) {
       super(props);
@@ -15,20 +15,20 @@ export default class Bundle extends Component {
 
   componentWillReceiveProps(nextProps) {
       if (nextProps.load !== this.props.load) {
-          this.load(nextProps)
+        this.load(nextProps)
       }
   }
 
   load(props) {
-      this.setState({
-          component: null
-      });
-      //注意这里，使用Promise对象; component.default导出默认
-      props.load().then((component) => {
-          this.setState({
-              component: component.default ? component.default : component
-          });
-      });
+    this.setState({
+        component: null
+    });
+    //注意这里，使用Promise对象; component.default导出默认
+    props.load().then((component) => {
+        this.setState({
+            component: component.default ? component.default : component
+        }, () => setTitle(props.title));
+    });
   }
 
   render() {

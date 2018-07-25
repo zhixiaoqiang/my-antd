@@ -1,4 +1,4 @@
-const db = require('../db/util')
+const db = require('../db/user')
 
 const user = {
 
@@ -8,8 +8,8 @@ const user = {
      */
     async signUp(ctx) {
         const query = ctx.query
-        const name = query.userName || 'nana'
-        const password = query.password || 'nana'
+        const name = query.userName
+        const password = query.password
         let results = await db.find({name})
         ctx.body = {data: {text: '失败', comment: name}, success: true}
         if (results.length > 0) {
@@ -28,14 +28,14 @@ const user = {
      */
     async signIn(ctx) {
         const query = ctx.query
-        const name = query.userName || 'nana'
-        const password = query.password || 'nana'
+        const name = query.userName
+        const password = query.password
         let results = await db.find({name, password})
-        ctx.body = '登录失败'
+        ctx.body = {data: {text: '登录失败', comment: name}, success: true}
         if (results.length > 0) {
-            ctx.body = '登录成功'
+            ctx.body = {data: {text: '登录成功', comment: name}, success: false}
         } else {
-            ctx.body = '用户或密码错误'
+            ctx.body = {data: {text: '用户或密码错误', comment: name}, success: false}
         }
     }
 

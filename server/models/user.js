@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 // 定义集合的字段及类型等
 const userSchema = new mongoose.Schema({
     name: String,
-    password: String
+    password: String,
+    tel: Number
 })
 
 // 默认导出'user' + 's'集合，可操作users集合的数据

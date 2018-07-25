@@ -9,6 +9,8 @@ export default class home extends Component {
       userInfo: {}
     }
   }
+  componentDidMount () {
+  }
   render () {
     return (
       <div style={{padding: '100px 0', textAlign: 'center'}}>

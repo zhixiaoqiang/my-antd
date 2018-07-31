@@ -6,13 +6,13 @@ import {
   Switch
 } from 'react-router-dom'
 import ROUTES from './routes'
-
+import cookie from 'cookiejs'
 
 class AuthRoute extends  Component {
   render () {
       let {component: Component, ...rest} = this.props
       // 是否登录
-      if (!rest.auth) {
+      if (!cookie.get('nId')) {
           return <Redirect to='/login' />
       }
       return <Route {...rest}  component={Component}/>

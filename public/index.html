@@ -20,13 +20,64 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>纳纳</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
+    <style type="text/css">
+      * {
+          margin: 0;
+          padding: 0;
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       }
-    </style>
+
+      html {
+          height: 100%;
+      }
+
+      body {
+          font-family: NotoSansHans-Regular, AvenirNext-Regular, arial, "Microsoft Yahei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+      }
+
+      div, a, button, input, textarea {
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+          outline: none;
+          border: none;
+          background: none;
+      }
+
+      i, em {
+          font-style: normal;
+      }
+
+      a {
+          text-decoration: none;
+      }
+
+      .hide {
+          display: none;
+      }
+      .show {
+          display: block;
+      }
+
+      .clearfix:before,
+      .clearfix:after,
+      .cell:before,
+      .cell:after {
+          content: '';
+          display: table;
+      }
+
+      .clearfix:after,
+      .cell:after {
+          clear: both;
+      }
+
+      .cell {
+          *zoom: 1;
+      }
+
+      li {
+          list-style-type: none
+      }
+  </style>
   </head>
   <body>
     <noscript>

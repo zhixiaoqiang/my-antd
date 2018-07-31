@@ -11,8 +11,15 @@ let routes = [
     component: 'home'
   },
   {
-    path: '/home1',
-    component: 'home'
+    path: '/youdao',
+    exact: true,
+    auth: true,
+    title: '有道',
+    component: 'youdao/index'
+  },
+  {
+    path: '/login',
+    component: 'login'
   },
   {
     path: '*',

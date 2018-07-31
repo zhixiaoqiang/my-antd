@@ -1826,6 +1826,10 @@ cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
 
+cookiejs@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/cookiejs/-/cookiejs-1.0.13.tgz#6d4996c3ad3bedd042b6e019d5dbf06d7c0189f9"
+
 cookies@~0.6.1:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/cookies/-/cookies-0.6.2.tgz#6ac1b052895208e8fc4c4f5f86a9ed31b9cb5ccf"
